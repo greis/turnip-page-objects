@@ -28,10 +28,14 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
+
+group :development do
+  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'pry'
+end
 
 group :test do
-  gem "turnip", git: "git://github.com/jnicklas/turnip.git"
+  gem "turnip", :git => 'git://github.com/greis/turnip.git'
   gem "rspec-rails"
 end
