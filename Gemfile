@@ -17,25 +17,14 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
+gem 'haml'
 
 
-group :development do
+group :test, :development do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'pry'
-end
-
-group :test do
-  gem "turnip", :git => 'git://github.com/greis/turnip.git'
+  gem "turnip", :git => 'git://github.com/greis/turnip.git', :branch => 'dynamic_tags'
+  gem "capybara"
   gem "rspec-rails"
+  gem 'launchy'
 end

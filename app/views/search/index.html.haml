@@ -1,0 +1,6 @@
+%h1 Search Result
+- @documents.each do |d|
+  .document
+    %h3= d.title
+    %cite= d.url
+    %p= d.content
